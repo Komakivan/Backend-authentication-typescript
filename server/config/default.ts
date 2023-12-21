@@ -1,7 +1,10 @@
+import dotenv from 'dotenv'
 
+// dotenv configuration
+dotenv.config()
 
 export default {
     port: 8000,
-    dbUri: "mongodb+srv://komakechivan555:n5O3QMDabeiVn5Di@node-typescript-express.cscjtpk.mongodb.net/?retryWrites=true&w=majority",
+    dbUri: process.env.MONGO_URL,
     logLevel: "info",
 }
